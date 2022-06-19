@@ -2,7 +2,7 @@
 #define AYDAN_RANGE_H
 
 #ifdef RANGE_HAS_RANDOM
-#include "random.h"
+#include "rnd.h"
 #endif
 
 /* Define RANGE_HAS_RANDOM to access randomWithin(). 
@@ -36,13 +36,13 @@ public:
 	/* Returns random number within range (inclusive). */
 	T randomWithin() const
 	{
-		return static_cast<T>(random::get(m_min, m_max));
+		return static_cast<T>(rnd::get(m_min, m_max));
 	}
 
 	/* Returns random number within range (exclusive). */
 	T randomWithinEx() const
 	{
-		return static_cast<T>(random::getex(m_min, m_max));
+		return static_cast<T>(rnd::getex(m_min, m_max));
 	}
 #endif
 };

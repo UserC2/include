@@ -1,8 +1,8 @@
-#include "random.h"
+#include "rnd.h"
 #include <cassert>
 #include <random>
 
-namespace random
+namespace rnd
 {
     /* Default random_device for system. Do not call. */
     std::random_device rdv{};

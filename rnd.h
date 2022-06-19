@@ -3,9 +3,9 @@
 
 #include <random>
 
-/* Header name should be changed: Identical to standard library <random.h> */
+/* Header name changed: Conflicted with some standard library stuff. */
 
-namespace random
+namespace rnd
 {
     /* Default random_device for system. Do not call. */
     extern std::random_device rdv;
