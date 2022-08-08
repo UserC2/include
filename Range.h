@@ -1,5 +1,5 @@
-#ifndef AYDAN_RANGE_H
-#define AYDAN_RANGE_H
+#ifndef C2_INCLUDE_RANGE_H
+#define C2_INCLUDE_RANGE_H
 
 #ifdef RANGE_HAS_RANDOM
 #include "rnd.h"

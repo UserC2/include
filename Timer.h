@@ -1,5 +1,5 @@
-#ifndef AYDAN_TIMER_H
-#define AYDAN_TIMER_H
+#ifndef C2_INCLUDE_TIMER_H
+#define C2_INCLUDE_TIMER_H
 #include <chrono> // for std::chrono functions
 
 /* Instantiate a Timer object to begin timing */

@@ -1,5 +1,5 @@
-#ifndef AYDAN_INPUT_H
-#define AYDAN_INPUT_H
+#ifndef C2_INCLUDE_INPUT_H
+#define C2_INCLUDE_INPUT_H
 #include <functional>
 #include <iostream>
 #include <string_view>

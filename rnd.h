@@ -1,5 +1,5 @@
-#ifndef AYDAN_RANDOM_H
-#define AYDAN_RANDOM_H
+#ifndef C2_INCLUDE_RANDOM_H
+#define C2_INCLUDE_RANDOM_H
 
 #include <random>
 
