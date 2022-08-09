@@ -5,3 +5,5 @@ Make scripts will expect this to be in the same parent directory as the project 
 For example, if the project is in `~/src/project/`, then this should be cloned into `~/src/include/`.
 
 Header guards should follow this format: `C2_INCLUDE_NAMEOFTHING_H`
+
+`FstreamHandler` uses `C2Utility` so make sure to compile `C2Utility.cpp` along with your project.
