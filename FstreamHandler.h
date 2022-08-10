@@ -13,7 +13,8 @@ private:
 	// changed to std::string in case filename goes out of scope
 	const int m_maxLines;
 public:
-	FstreamHandler(std::string_view filename);
+	FstreamHandler(std::string_view filename
+		, std::ios_base::openmode mode=std::ios_base::in | std::ios_base::out);
 	virtual ~FstreamHandler() = default;
 	/* Returns filename. */
 	std::string_view filename() const { return m_filename; }

@@ -6,8 +6,9 @@
 #include <string>
 #include <string_view>
 
-FstreamHandler::FstreamHandler(std::string_view filename)
-	: m_fstream{ static_cast<std::string>(filename) }
+FstreamHandler::FstreamHandler(std::string_view filename
+	, std::ios_base::openmode mode)
+	: m_fstream{ static_cast<std::string>(filename), mode }
 	, m_filename{ static_cast<std::string>(filename) }
 	, m_maxLines{ utility::getLines(m_fstream) }
 {
