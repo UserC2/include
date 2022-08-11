@@ -8,6 +8,16 @@
 // namespaces are typically lowercase... I changed this to match
 namespace input
 {
+	/* Returns false if user enters quitString, otherwise returns true after
+	* user presses enter. Case sensitive. */
+	bool askToContinue(std::string_view prompt, std::string_view quitString)
+	{
+		std::cout << prompt;
+		std::string input{};
+		std::getline(std::cin, input); // no std::ws so user can press enter
+		return input != quitString;
+	}
+
 	/* Loops until user enters Y/y or N/n. Returns true if Y/y, false if N/n */
 	bool chooseYOrN(std::string_view prompt)
 	{
