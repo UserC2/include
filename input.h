@@ -23,7 +23,8 @@ namespace input
 
 	/* Get full line of input as a string, no input validation.
 	* Manually call invalidInput() if the user enters invalid input. */
-	std::string getSInput(std::string_view prompt);
+	[[deprecated("Use getInput<std::string> instead.")]]
+	std::string getSInput (std::string_view prompt);
 
 	/* Checks if std::cin fails, if it does, prompts user to enter again.
 	* Make sure to specify type it should return in < > between name and () */
@@ -49,6 +50,17 @@ namespace input
 				return input;
 			}
 		}
+	}
+
+	/* Get full line of input as a string, no input validation.
+	* Manually call invalidInput() if the user enters invalid input. */
+	template <>
+	std::string getInput<std::string>(std::string_view prompt)
+	{
+		std::cout << prompt;
+		std::string input{};
+		std::getline(std::cin >> std::ws, input);
+		return input;
 	}
 }
 #endif
