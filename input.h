@@ -2,6 +2,7 @@
 #define C2_INCLUDE_INPUT_H
 #include <functional>
 #include <iostream>
+#include <string>
 #include <string_view>
 
 // compile input.cpp with your project!
