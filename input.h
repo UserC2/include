@@ -23,8 +23,13 @@ namespace input
 	void invalidInput();
 
 	/* Get full line of input as a string, no input validation.
+	* Manually call invalidInput() if the user enters invalid input.
+	* Use input::getInput<std::string> to get a string without spaces. */
+	std::string getLineInput(std::string_view prompt);
+
+	/* Get full line of input as a string, no input validation.
 	* Manually call invalidInput() if the user enters invalid input. */
-	[[deprecated("Use getInput<std::string> instead.")]]
+	[[deprecated("Use getLineInput() instead.")]]
 	std::string getSInput(std::string_view prompt);
 
 	/* Checks if std::cin fails, if it does, prompts user to enter again.
@@ -55,7 +60,9 @@ namespace input
 
 	/* Get full line of input as a string, no input validation.
 	* Manually call invalidInput() if the user enters invalid input. */
+	/*
 	template <>
 	std::string getInput<std::string>(std::string_view prompt);
+	*/
 }
 #endif
