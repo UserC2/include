@@ -65,7 +65,7 @@ namespace input
 	/* Get full line of input as a string, no input validation.
 	* Manually call invalidInput() if the user enters invalid input. */
 	template <>
-	std::string getInput<std::string>(std::string_view prompt);
+	std::string getInput<std::string>(std::string_view prompt)
 	{
 		std::cout << prompt;
 		std::string input{};
