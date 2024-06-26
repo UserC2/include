@@ -44,7 +44,7 @@ namespace utility
 
 	std::string getPrefix(std::string_view string)
 	{
-		return isAVowel(string[0]) ? "An " : "A ";
+		return isPlural(string) ? "Some " : (isAVowel(string[0]) ? "An " : "A ");
 	}
 
 	bool isAVowel(char c)
@@ -55,6 +55,12 @@ namespace utility
 		return (0x208222 >> (c & 0x1f)) & 1;
 		/* geza on StackOverflow :
 		https://stackoverflow.com/questions/47846406/ */
+	}
+
+	bool isPlural(std::string_view string)
+	{
+		// TODO: this needs to be implemented
+		return false;
 	}
 
 // https://cplusplus.com/articles/4z18T05o/#HeaderFiles

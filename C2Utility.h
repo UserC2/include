@@ -22,11 +22,15 @@ namespace utility
 	* Returns the amount of lines in a file. */
 	int getLines(std::fstream& file);
 
-	/* Returns the prefix ('a' or 'an') to a string. */
+	/* Returns the prefix ('A', 'An', or 'Some') to a string including a
+	* trailing space. */
 	std::string getPrefix(std::string_view string);
 
 	/* Returns true if the input character is a vowel (excluding Y). */
 	bool isAVowel(char c);
+
+	/* Returns true if the input string is plural. */
+	bool isPlural(std::string_view string);
 
 	/* Clears the screen. */
 	//void clearScreen();
