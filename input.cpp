@@ -51,9 +51,9 @@ namespace input
 		std::cout << "Invalid input.\n";
 	}
 
-	/* Get full line of input as a string, no input validation.
-	* Manually call invalidInput() if the user enters invalid input. 
-	* Use input::getInput<std::string> to get a string without spaces. */
+	/* Get full line of input as a string without input validation.
+	* Manually call invalidInput() if the user enters invalid input.
+	* Use input::getInput<std::string> to get a single word. */
 	std::string getLineInput(std::string_view prompt)
 	{
 		std::cout << prompt;
@@ -62,7 +62,7 @@ namespace input
 		return input;
 	}
 
-	/* Get full line of input as a string, no input validation.
+	/* Get full line of input as a string without input validation.
 	* Manually call invalidInput() if the user enters invalid input. */
 	[[deprecated("Use getLineInput() instead.")]]
 	std::string getSInput(std::string_view prompt)
@@ -73,17 +73,4 @@ namespace input
 		std::getline(std::cin >> std::ws, input);
 		return input;
 	}
-
-	/* Get full line of input as a string, no input validation.
-	* Manually call invalidInput() if the user enters invalid input. */
-	/*
-	template <>
-	std::string getInput<std::string>(std::string_view prompt)
-	{
-		std::cout << prompt;
-		std::string input{};
-		std::getline(std::cin >> std::ws, input);
-		return input;
-	}
-	*/
 }
